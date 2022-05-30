@@ -1,0 +1,57 @@
+function registraFinalizados(){
+
+  var motor = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  var matriz = [];
+
+  var linhaFim = motor.getRange("A:A").getLastRow();
+  var linhaIni = 4;
+  var colunaFim = 11;
+  var colunaIni = 1;
+
+  statusAguarde();
+
+  for (linhaIni ; linhaIni <= linhaFim; linhaIni++){
+
+    for(colunaIni=1;colunaIni<=colunaFim;colunaIni++){
+
+      matriz[colunaIni] = motor.getRange(linhaIni,colunaIni).getValue();
+      
+    }
+
+    if(matriz[colunaFim]== ""){
+
+      break;
+    }
+
+    chamaFinalizados();
+    inserirFinalizados(matriz);
+    chamaMatriz();   
+  }
+
+  for(linhaIni = 4;linhaIni <=linhaFim;linhaIni++){
+
+    for(colunaIni=1;colunaIni<=colunaFim;colunaIni++){
+
+      matriz[colunaIni] = motor.getRange(linhaIni,colunaIni).clear();
+   } 
+  }
+  concluir();
+}
+
+function inserirFinalizados(matriz){
+
+  var motor = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  
+  var linha;
+  var coluna = 1
+
+  linha = motor.getRange("A:A").getLastRow();
+
+  while(coluna<12){
+
+    motor.getRange(linha+1,coluna).setValue(matriz[coluna]);
+    motor.getRange(linha,coluna).activate();
+    coluna = coluna+1;
+  }
+}
