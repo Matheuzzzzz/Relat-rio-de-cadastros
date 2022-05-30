@@ -1,0 +1,67 @@
+function rotina(){
+
+  var motor = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet(); 
+
+  var colunaInicial;
+  var validacao;
+  var linhaInicial;
+
+  colunaInicial = motor.getCurrentCell().getColumn();  
+  linhaInicial = motor.getCurrentCell().getRow();       
+  validacao = motor.getCurrentCell().isChecked();       
+
+  if (colunaInicial == 17 && validacao == true){
+
+    statusAguarde();
+    transferirValores();
+    posicaoInicial(linhaInicial,colunaInicial);
+    concluir();
+  }
+}
+
+function transferirValores(){
+
+  var motor = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var valores = [];
+
+  var coluna = motor.getCurrentCell().getColumn();
+  var linha = motor.getCurrentCell().getRow(); 
+
+  for(coluna ; coluna > 0;coluna--){
+
+    valores[coluna] = motor.getRange(linha, coluna).getValue();
+    
+  }
+
+  chamaMatriz();
+  guardarValores(valores);
+
+  chamaPendentes();
+  limparEmBranco(linha);
+}
+
+function guardarValores(valores){
+
+  var motor = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  
+  var coluna = 1;
+  var linha = motor.getLastRow();  
+
+  while(coluna!=12){
+
+    if(coluna == 11){             //Caso a coluna seja 11 é inserido a data e hora atual.
+
+      valores[coluna] = motor.getRange(linha+1,coluna).setValue(new Date());
+      break;
+    }
+
+    motor.getRange(linha+1,coluna).setValue(valores[coluna]);
+    coluna = coluna+1;
+  }
+}
+
+function limparEmBranco(linha){
+
+  var motor = SpreadsheetApp.getActive().deleteRow(linha)
+
+}
