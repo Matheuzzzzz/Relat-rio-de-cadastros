@@ -1,5 +1,5 @@
 # Relatorio-de-produtos-VTEX
-Automação criada para ordenação de uma planilha
+Automação criada para planilhas de controle de demandas
 
 Está  é uma automção que criei para o gestor do setor de compras da Delupo ferragens.
 
