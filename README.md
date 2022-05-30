@@ -17,5 +17,5 @@ Foi solicitado uma automação em uma das planilhas de controle da equipe de cad
 * Quando a página Matriz estiver populada o usuário pode aperta no botão "transferir finalizados" que executa um código que transfere os dados da Matriz para a página "Finalizados".
 
 ### A Planilha 📚
-[Relatorio de produtos VTEX](https://docs.google.com/spreadsheets/d/1I4yeUIQSHMUZ4IPFXNzrbD3BlFBqFE8g-gMTwaD7SH4/edit#gid=1377371867)
+[Relatorio de produtos VTEX](https://docs.google.com/spreadsheets/d/1I4yeUIQSHMUZ4IPFXNzrbD3BlFBqFE8g-gMTwaD7SH4/edit#gid=1377371867!_target=blank)
 Está é uma aplicação focada em um projeto específico mas pode ser usado em diversar aplicações que visam o controle de demandas de uma equipe grande ou pequena.
