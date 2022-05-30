@@ -18,4 +18,4 @@ Foi solicitado uma automação em uma das planilhas de controle da equipe de cad
 
 ### A Planilha 📚
 [Relatorio de produtos VTEX](https://docs.google.com/spreadsheets/d/1I4yeUIQSHMUZ4IPFXNzrbD3BlFBqFE8g-gMTwaD7SH4/edit#gid=1377371867!target=_blank)
-Está é uma aplicação focada em um projeto específico mas pode ser usado em diversar aplicações que visam o controle de demandas de uma equipe grande ou pequena.
+</br> Está é uma aplicação focada em um projeto específico mas pode ser usado em diversar aplicações que visam o controle de demandas de uma equipe grande ou pequena.
