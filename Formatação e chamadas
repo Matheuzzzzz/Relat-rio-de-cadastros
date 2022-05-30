@@ -1,0 +1,48 @@
+function chamaFinalizados(){
+
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  var planilha = sheet.getSheetByName('Finalizados');
+  SpreadsheetApp.setActiveSheet(planilha)
+}
+
+function chamaPendentes(){
+
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  var planilha = sheet.getSheetByName('Pendentes');
+  SpreadsheetApp.setActiveSheet(planilha);
+}
+
+function chamaMatriz(){
+
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  var planilha = sheet.getSheetByName('Matriz');
+  SpreadsheetApp.setActiveSheet(planilha);
+}
+
+function posicaoInicial(linhaInicial, colunaInicial){
+
+  var motor = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  motor.getRange(linhaInicial,colunaInicial).activate();
+}
+
+function concluir(){
+
+  var motor =SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  motor.getRange(1,1).setValue("Concluído")
+  .setBackground("#3dc55d")
+  .setFontColor("#ffffff")
+  .setFontSize(24);
+}
+
+function statusAguarde(){
+
+  var motor =SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  motor.getRange(1,1).setValue("Aguarde...")
+  .setBackground("#cbc72e")
+  .setFontColor("#ffffff")
+  .setFontSize(24);
+
+}
